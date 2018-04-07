@@ -1,5 +1,8 @@
 #Ex 2: Create a function that accepts two arguments, an integer and a vector of integers. It returns TRUE if the integer is present in the vector, otherwise it returns FALSE. Make sure you pay careful attention to your placement of the return(FALSE) line in your function!
 
+#Ex 3: Create a function that accepts two arguments, an integer and a vector of integers. It returns the count of the number of occurences of the integer in the input vector.
+
+
 prod <- function(a,b){
   a <- as.integer(a)
   if(is.integer(a) == TRUE & is.vector(b) == TRUE){
@@ -12,10 +15,13 @@ prod <- function(a,b){
      }
     }
    if(sum(x)>= 1 ) {
-     return('TRUE')
+     print('TRUE')
    }else{
-     return('FALSE')
+     print('FALSE')
    }
+ s <- sum(x)
+ print(paste('There are', s, 'targets in the vector.'))
+ 
   }else{
       print('"a" should be an integer and "b" should be a vector, try again!')
     }
